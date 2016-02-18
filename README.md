@@ -5,22 +5,26 @@ LazyLoadable is a small Backbone.Marionette behavior which enables background im
 
 To use this behavior, instantiate the behavior in your view. This will pass the view's $el scope to the LazyImageLoader method.
 
-    var ExampleView = Marionette.ItemView.extend({
-	    template: "#tpl-example",
-	    behaviors: {
-	        lazyLoadable: {
-	            behaviorClass: LazyLoadable
-	        }
-	    }
-	});
+```javascript
+var ExampleView = Marionette.ItemView.extend({
+	template: "#tpl-example",
+	behaviors: {
+		lazyLoadable: {
+			behaviorClass: LazyLoadable
+		}
+	}
+});
+```
 
 Your template should look like this:
 
-    <script type="text/template" id="tpl-example">
-	    <div class="home-section section-production row" data-lazy-type="background"
-	         data-lazy-src="http://giphy.com/embed/bzoD9WOiU1wAg">
-	    </div>
-	</script>
+```
+<script type="text/template" id="tpl-example">
+    <div class="home-section section-production row" data-lazy-type="background"
+         data-lazy-src="http://giphy.com/embed/bzoD9WOiU1wAg">
+    </div>
+</script>
+```
 
 As you can see, the following data attributes data attributes can be used:
 
